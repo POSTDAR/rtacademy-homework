@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title> Назва сторінки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <main>
+            <div>
+                <img srcset="images/lake.jpg,
+             images/lake.jpg 1.5x,
+             images/lake.jpg 2x,
+             images/lake.jpg 3x"
+                     src="images/lake.jpg" alt="Lake" >
+            </div>
+            <div>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/mountains400px.jpg">
+                    <source media="(max-width: 900px)" srcset="images/mountains800px.jpg">
+                    <source media="(max-width: 1024px)" srcset="images/mountains1000px.jpg">
+                    <img src="images/mountains1000px.jpg" alt="Mountains">
+                </picture>
+         </div>
+    </main>
+</body>
+</html>

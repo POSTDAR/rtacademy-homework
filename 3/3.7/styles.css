@@ -1,0 +1,80 @@
+p {
+
+}
+.links li {
+    background-color: cadetblue;
+    padding: 1em 3em;
+    display: inline-block;
+}
+.links li a {
+    color: ivory;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+.boxes div {
+    background-color: lightpink;
+    padding: 1em 2em;
+    border: 4px double deeppink;
+    margin: 1em;
+    flex: 1 0 auto;
+    width: 25%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 6em 2fr 1fr;
+    grid-template-rows: 5em 10em;
+    /* 5em - перший ряд, 10em - другий ряд */
+    grid-gap: 0.5em; /* 0.25em - відступ між блоками */
+}
+.grid div {
+    background-color: lightgoldenrodyellow;
+    padding: 2em;
+    border: 2px solid #333333;
+}
+.float-right {
+    background-color: #e76f51;
+    padding: 1em 2em;
+    margin: 0 0.5em 0 0;
+    float: right;
+}
+.float-inherit {
+    background-color: #f4a261;
+    padding: 1em 2em;
+    margin: 0 0 0 0.5em;
+    height: 8em;
+    float: inherit;
+}
+div p {
+    background-color: #e9c46a;
+    padding: 1em;
+    margin: 0.5em 0 0 0;
+}
+.positioned {
+    background-color: #ff546870;
+    position: relative;
+    top: 1em;
+    left: 1em;
+}
+form {
+    display: table;
+}
+form div {
+    display: table-row;
+}
+form label, form input {
+    display: table-cell;
+    margin-bottom: 1em;
+    width: 20em;
+}
+form label {
+    width: 40em;
+    padding-right: 1em;
+    text-align: right;
+}
+.container {
+    column-width: 15em;
+}
