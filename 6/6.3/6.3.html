@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script> // Варіант 1
+    let a = 10,
+        b = 20;
+    a= a*b/(b=a);
+    console.log( a, b );
+</script>
+<script> // Варіант 2
+    let a = 10,
+        b = 20;
+    a= a + b - (b=a);
+    console.log( a, b );
+</script>
+<script> // Варіант 3
+let a = 10,
+    b = 20;
+b= b-a;
+a= b+b;
+console.log( a, b );
+</script>
+</body>
+</html>
