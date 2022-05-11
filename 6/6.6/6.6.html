@@ -6,10 +6,17 @@
 </head>
 <body>
 <script>
+    let cityName = 'киїВ';
+    let cityName1 = cityName.substring(0,1).toUpperCase()
+    let cityName2 = cityName.substring(1).toLowerCase()
+
+    function capitalize ()
+    {
+        console.log(cityName1 + cityName2 );
+    }
+
     let cityNameCapitalized = capitalize('стОКГольМ');
     console.log( cityNameCapitalized );
-
 </script>
-
 </body>
 </html>

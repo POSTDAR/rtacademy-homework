@@ -6,22 +6,28 @@
 </head>
 <body>
 <script>
-    for( let i = 1; i < 32 ; i++)
+    for( let i = 1; i <= 32 ; i++)
     {
-            if( i % 2===0 && i % 4 === 0 )
-            {
-                console.log( i + "*");
-            }
-            else if (i % 2 === 0 && i % 10 === 0)
-            {
-                console.log( i + "^");
-            }
+        if (i % 2 !== 0)
+        {
+            continue;
+        }
+        let prefix = '';
+        if( i % 4 === 0 )
+        {
+           prefix = "*";
+        }
+        if (i % 10 === 0)
+        {
+            prefix += "^";
+        }
+        console.log( i + prefix);
 
     }
 </script>
 
 <script>
-    let i = 1;
+   /* let i = 1;
     do
     {
         if( i % 2===0 && i % 4 === 0 )
@@ -35,6 +41,7 @@
         i++;
     }
     while( i < 32 );
+    */
 </script>
 </body>
 </html>
