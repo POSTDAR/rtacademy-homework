@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function capitalize (cityName)
+    {
+        if ( typeof cityName === 'string')
+        {
+            const cityName1 = cityName.substring(0,1).toUpperCase();
+            const cityName2 = cityName.substring(1).toLowerCase();
+            return cityName1+cityName2;
+        }
+        else if ( typeof cityName === 'object')
+        {
+            let cityNameCapitalized = [];
+
+            for (let i = 0; i < cityName.length; i++) {
+                cityNameCapitalized.push(
+                    capitalize( cityName[i] )
+                );
+            }
+            return cityNameCapitalized;
+        }
+        else
+        {
+            return "";
+        }
+    }
+    let cityNameCapitalized = capitalize( [ [ 'київ', 'львів' ], [ 'одеса' ], 'харків', { "q" : "париж", 2 : "стокгольм" } ] );
+    console.log( cityNameCapitalized );
+</script>
+</body>
+</html>

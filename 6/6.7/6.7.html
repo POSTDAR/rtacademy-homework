@@ -5,6 +5,40 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function capitalize (cityName)
+    {
+        let words = cityName.split('-');
+        for (let i = 0; i < words.length; i++)
+        {
+            if (words[i].indexOf('\'')!== -1 )
+            {
+                let wordsToArray = words[i].split('\''); // ['lend', 'liz']
+                wordsToArray[0] = wordsToArray[0].toLowerCase();
+                wordsToArray[1] = capitalize(wordsToArray[1]);
+                words[i]=wordsToArray.join('\'');
+            }
+            else if ( i === 0 || i === words.length -1 )
+            {
+                const cityName1 = words[i].substring(0, 1).toUpperCase();
+                const cityName2 = words [i].substring(1).toLowerCase();
+                words[i] = cityName1 + cityName2;
+            }
+            else if ( words[i].length >= 1 && words[i].length <= 3)
+            {
+                words[i] = words[i].toLowerCase();
+            }
+            else
+            {
+                words[i] = capitalize(words [i]);
+            }
+        }
+        return words.join('-');
+    }
 
+    let cityNameCapitalized = capitalize('Сен-сатюрнен-лез\'спт');
+    console.log( cityNameCapitalized );
+
+</script>
 </body>
 </html>

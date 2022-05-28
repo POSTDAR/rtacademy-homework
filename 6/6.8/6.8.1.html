@@ -8,6 +8,8 @@
 <script>
     function getRandomInt(min,max)
     {
+        min = typeof(min) ==="bigint" ? Number(min) : min;
+        max = typeof(max) ==="bigint" ? Number(max) : max ;
         if (min>max)
         {
             min= min-max;
@@ -17,10 +19,8 @@
         result = Math.round(getRandom);
         return result;
     }
-    let randomInt = getRandomInt( 50.444, 100 );
+    let randomInt = getRandomInt( 50n, 100 );
     console.log( 'Випадкове число: ' + randomInt );
-    let randomInt1 = getRandomInt( 600, 100 );
-    console.log( 'Випадкове число: ' + randomInt1 );
 </script>
 </body>
 </html>
