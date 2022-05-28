@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function capitalize (cityName)
+    {
+        if ( typeof cityName === 'string')
+        {
+            const cityName1 = cityName.substring(0,1).toUpperCase();
+            const cityName2 = cityName.substring(1).toLowerCase();
+            return cityName1+cityName2;
+        }
+        else
+        {
+            return "";
+        }
+    }
+    let cityNameCapitalized = capitalize('стОКГольМ');
+    console.log( cityNameCapitalized );
+    let cityNameCapitalized1 = capitalize(1234567);
+    console.log( cityNameCapitalized1 );
+    let cityNameCapitalized2 = capitalize(999999n);
+    console.log( cityNameCapitalized2 );
+    let cityNameCapitalized3 = capitalize(false);
+    console.log( cityNameCapitalized3 );
+ </script>
+</body>
+</html>

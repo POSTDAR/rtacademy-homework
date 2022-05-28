@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+//let age = 15,
+//withParents = true;
+// Переписати цей тернарний запис:
+// let accessAllowed = ( age > 18 ) ? 'Yes' : ( withParents ? 'Yes' : 'No' );
+// ваш код пишіть тут
+//console.log( 'accessAllowed = ' + accessAllowed );
+<script>
+    let age = 15,
+        withParents = true;
+    let accessAllowed = 'No';
+    if ( age > 18 || withParents)
+    {
+        accessAllowed = 'Yes'
+    }
+
+    console.log( 'accessAllowed = ' + accessAllowed );
+</script>
+</body>
+</html>
