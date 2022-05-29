@@ -21,17 +21,24 @@ Mykolayiv,46.9677,31.9843,Ukraine,510840
     {
         const resultArray = [];
         const lines = csvFileContent.split( "\n" );
-        let resultArray1 = resultArray.split(",");
-        resultArray1[0]=
 
-        let ArrayLength = resultArray1.length
-        for (ArrayLength = 0, i<=4, i++)
-        { if (ArrayLength === 0 )
-        {
-
+        for ( let i = 0; i < lines.length; i++ )
+        { if ( lines[i].length < 10 )
+            {
+                continue
+            }
+            const cityInfoArray = lines[ i ].split( ',');
+            const cityInfoObject =
+                {
+                    "city"       : cityInfoArray[ 0 ],
+                    "latitude"   : parseFloat( cityInfoArray[ 1 ] ),
+                    "longitude"  : parseFloat( cityInfoArray[ 2 ] ),
+                    "country"    : cityInfoArray[ 3 ],
+                    "population" : parseInt( cityInfoArray[ 4 ] ),
+                };
+            resultArray.push(cityInfoObject);
         }
-        }
-
+        return resultArray;
     }
 
     let result = parseCSV( csvFileContent );
