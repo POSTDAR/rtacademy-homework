@@ -9,6 +9,6 @@ CREATE TABLE users (
                        gender gender_request,
                        timezone varchar(37),
                        registration_time timestamp,
-                       registration_ip cidr (15)
+                       registration_ip cidr
 
 )
