@@ -1,6 +1,6 @@
 CREATE TABLE post_comment
 (
-    id              int PRIMARY KEY,
+    id              int PRIMARY KEY AUTO_INCREMENT,
     user_id         int,
     pos_id          int,
     created_date    datetime    NOT NULL ,

@@ -1,6 +1,6 @@
 CREATE TABLE post
 (
-    id           int PRIMARY KEY,
+    id           int PRIMARY KEY AUTO_INCREMENT,
     author_id    int,
     category_id  int,
     title        varchar(128) NOT NULL ,
