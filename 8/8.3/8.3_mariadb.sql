@@ -13,5 +13,6 @@ create table users
     UNIQUE (id),
     UNIQUE (email),
     PRIMARY KEY (id),
-    CHECK ( phone = 13)
+    CHECK ( phone = '+^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]?'),
+    CHECK ( LOWER(email) )
 );

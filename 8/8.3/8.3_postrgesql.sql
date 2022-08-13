@@ -10,4 +10,6 @@ CREATE TABLE users (
                        timezone char(37)            NOT NULL ,
                        registration_time timestamp  NOT NULL ,
                        registration_ip char(15)     NOT NULL
+CHECK ( phone = '+^[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]?'),
+                       CHECK ( LOWER(email) )
 )
