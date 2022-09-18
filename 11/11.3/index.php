@@ -11,7 +11,7 @@
         $words = explode('-', $cityName);
         for ($i = 0; $i < strlen($words); $i++)
         {
-            if ($words[$i].indexOf('\'')!== -1 )
+            if (key($words[$i],'\'')!== -1 )
             {
                 $wordsToArray = explode('\'',$words[$i]); // ['lend', 'liz']
                 $wordsToArray[0] = lcfirst($wordsToArray[0]);
@@ -20,11 +20,11 @@
             }
             else if ( $i === 0 || $i === strlen($words) -1 )
             {
-                const cityName1 = strtoupper(substr("$words[$i]",0, 1));
-                const cityName2 = strtolower(substr("$words [$i]",1);
-                $words[$i] = cityName1 + cityName2;
+                $cityName1 = strtoupper(substr($words[$i],0, 1));
+                $cityName2 = strtolower(substr($words[$i],1);
+                $words[$i] = $cityName1.$cityName2;
             }
-            else if ( strlen($words[$i]) >= 1 && strlen($words[$i] <= 3)
+            else if ( strlen($words[$i]) >= 1 && strlen($words[$i] <= 3))
             {
                 $words[$i] = strtolower($words[$i]);
             }
