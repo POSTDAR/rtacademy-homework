@@ -36,8 +36,8 @@
         return $words.join('-');
     }
 
-    let cityNameCapitalized = capitalize('Сен-сатюрнен-лез\'спт');
-    console.log( cityNameCapitalized );
+    $cityNameCapitalized = capitalize('Сен-сатюрнен-лез\'спт');
+    echo ( $cityNameCapitalized );
 ?>
 </body>
 </html>
